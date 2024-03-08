@@ -1,12 +1,22 @@
+import { Link } from 'react-router-dom';
+
 function Blog() {
+  const data = require('../data.json');
+
   return (
-    <div className="blog">
+    <div className="blog minHeight">
       <h1>Blog</h1>
-      <h2>Education</h2>
-      <h2>Social Media</h2>
-      <h2>Artificial Intelligence</h2>
-      <h2>Environment</h2>
-      <h2>Science</h2>
+      <section>
+          {
+              data.blogData.map((item,index)=>(
+                  <div key={index}>
+                      <h3>{item.title}</h3>
+                      <p>{item.content}</p>
+                      <Link to={`/blog/${item.urlText}`}>View More</Link>
+                  </div>
+              ))
+          }
+      </section>
     </div>
   )
 }

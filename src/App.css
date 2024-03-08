@@ -9,6 +9,10 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+.minHeight{
+    min-height: calc(100vh - 170px);
+}
+
 
 /********** NAVBAR *************/
 .navBar{
@@ -64,7 +68,6 @@ body{
 .blog{
     background-color: white;
     padding: 40px;
-    min-height: calc(100vh - 70px);
 }
 
 .blog h1 {
@@ -73,15 +76,16 @@ body{
     color: #ff00d4;
 }
 
-.blog > div{
+.blog > section > div{
     border: 1px solid #ff00d4;
-    padding: 10px;
+    padding: 10px 20px;
     margin: 20px;
     border-radius: 20px;
 }
 
-.blog p{
-    font-size: 15px;
+/********** BLOG-TOPIC *************/
+.BlogTopic h1{
+    text-align: center;
 }
 
 /********** FOOTER *************/
