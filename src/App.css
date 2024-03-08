@@ -38,6 +38,11 @@ body{
     color: aqua;
 }
 
+.navBar .active{
+    background-color: white;
+    color: aqua;
+}
+
 /********** SECTION *************/
 .section{
     width: 100%;
