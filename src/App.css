@@ -27,13 +27,13 @@ body{
     justify-content: space-around;
 }
 
-.navBar .link{
+.navBar .navBar-item{
     padding: 5px 10px;
     border-radius: 15px; 
     text-decoration: none;
     color: white;
 }
-.navBar .link:hover{
+.navBar .navBar-item:hover{
     background-color: white;
     color: aqua;
 }
