@@ -5,8 +5,8 @@ function Footer() {
 
   function navToPage(pageName){
     switch(pageName){
-      case "Blog":
-        navigate('/blog')
+      case "Home":
+        navigate('/')
         break;
       case "About":
         navigate('/about')
@@ -23,7 +23,7 @@ function Footer() {
         <h3>Pages</h3>
         <span onClick={()=> navToPage('Home')}>Home</span>
         <button onClick={()=> navToPage('About')}>About</button>
-        <button onClick={()=> navigate('Blog')}>Blog</button>
+        <button onClick={()=> navigate('/blog')}>Blog</button>
       </div>
     </div>
   )
