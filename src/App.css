@@ -104,6 +104,13 @@ body{
     justify-content: space-around;
 }
 
-.footer > div >button{
+.footer > div > span, .footer > div > button {
+    cursor: pointer;
     margin-right: 20px;
+}
+
+.footer > div > span{
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: blue;
 }
