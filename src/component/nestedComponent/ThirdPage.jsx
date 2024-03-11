@@ -1,6 +1,8 @@
+import styles from './style.module.css'; 
+
 function ThirdPage() {
   return (
-    <div>
+    <div  className={styles.stylePage}>
       <h1>Third Page</h1>
     </div>
   )

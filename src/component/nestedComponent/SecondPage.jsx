@@ -1,6 +1,8 @@
+import styles from './style.module.css'; 
+
 function SecondPage() {
   return (
-    <div>
+    <div className={styles.stylePage}>
       <h1>Second Page</h1>
     </div>
   )
