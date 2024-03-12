@@ -1,8 +1,8 @@
-import styles from './style.module.css'; 
+import './nestedComponent.css'; 
 
 function FirstPage() {
   return (
-    <div className={styles.stylePage}>
+    <div className="stylePage">
       <h1>First Page</h1>
     </div>
   )
