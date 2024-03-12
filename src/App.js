@@ -1,13 +1,30 @@
-import "./App.css"
-import NavBar from "./component/Navbar";
-import Home from "./component/Home";
-import About from "./component/About"
-import Blog from "./component/Blog";
-import Footer from "./component/Footer";
-import Page404 from "./component/Page404";
-import BlogTopic from './component/BlogTopic';
+// CSS
+import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Component
+import NavBar from "./component/Navbar";
+import Footer from "./component/Footer";
+
+// Pages
+import Home from "./component/Home";
+import About from "./component/About";
+import Blog from "./component/Blog";
+import BlogTopic from './component/BlogTopic';
+import Pages from "./component/Pages";
+import Page404 from "./component/Page404";
+
+// Child pages of Pages
+import FirstPage from "./component/nestedComponent/FirstPage";
+import SecondPage from "./component/nestedComponent/SecondPage";
+import ThirdPage from "./component/nestedComponent/ThirdPage";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+
 
 function App() {
 
@@ -19,6 +36,12 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/blog" element={<Blog />}/>
           <Route path="/blog/:topicName" element={<BlogTopic/>}/>
+          <Route path="/pages">
+            <Route path="" element={<Pages />}/>
+            <Route path="first-page" element={<FirstPage/>}/>
+            <Route path="second-page" element={<SecondPage/>}/>
+            <Route path="third-page" element={<ThirdPage/>}/>
+          </Route>
           <Route path="/*" element={<Page404/>}/>
         </Routes>
         <Footer />
