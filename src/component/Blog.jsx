@@ -12,7 +12,7 @@ function Blog() {
                   <div key={index}>
                       <h3>{item.title}</h3>
                       <p>{item.content}</p>
-                      <Link to={`/blog/${item.urlText}`}>View More</Link>
+                      <Link to={`/blog/${item.urlText}`} state={item}>View More</Link>
                   </div>
               ))
           }
