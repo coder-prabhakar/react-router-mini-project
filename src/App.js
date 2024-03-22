@@ -12,6 +12,10 @@ import Blog from "./component/Blog";
 import BlogTopic from './component/BlogTopic';
 import Pages from "./component/Pages";
 import Page404 from "./component/Page404";
+import Login from "./component/Login";
+
+// Protected Route
+import ProtectedRoute from "./component/ProtectedRoute";
 
 // Child pages of Pages
 import FirstPage from "./component/nestedComponent/FirstPage";
@@ -32,9 +36,9 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/blog" element={<Blog />}/>
+          <Route path="/" element={<ProtectedRoute ComponentName={Home}/>}/>
+          <Route path="/about" element={<ProtectedRoute ComponentName={About}/>}/>
+          <Route path="/blog" element={<ProtectedRoute ComponentName={Blog}/>}/>
           <Route path="/blog/:topicName" element={<BlogTopic/>}/>
           <Route path="/pages">
             <Route path="" element={<Pages />}/>
@@ -42,6 +46,7 @@ function App() {
             <Route path="second-page" element={<SecondPage/>}/>
             <Route path="third-page" element={<ThirdPage/>}/>
           </Route>
+          <Route path="/login" element={<Login/>}/>
           <Route path="/*" element={<Page404/>}/>
         </Routes>
         <Footer />
