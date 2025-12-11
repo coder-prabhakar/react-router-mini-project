@@ -1,21 +1,13 @@
-// React
-import React, { useEffect } from 'react'
-// Redux
-import { useSelector } from "react-redux";
-// Router
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { useCommonContext } from '../contextAPI/CommonContext';
 
-function ProtectedRoute({ComponentName}) {
-    const loginStatus = useSelector((state) => state.userStatus );
-    const navigate = useNavigate()
 
-    useEffect(()=>{
-        if(!loginStatus){
-            navigate('/login')
-        }
-    })
+export default function ProtectedRoute({ children }) {
+    const { isLogin } = useCommonContext();
 
-  return <ComponentName />
+    if(!isLogin) { 
+        return <Navigate to={'/login'} replace={true} />; 
+    };
+
+    return <>{children}</>;
 }
-
-export default ProtectedRoute;
