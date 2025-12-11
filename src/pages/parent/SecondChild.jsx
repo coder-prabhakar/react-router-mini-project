@@ -7,7 +7,7 @@ function SecondChild() {
         <>
             <Navbar />
             <div  className="stylePage section">
-                <h1>Second Page</h1>
+                <h1>Second Child</h1>
             </div>
             <Footer />
         </>

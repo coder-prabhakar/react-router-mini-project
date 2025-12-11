@@ -7,7 +7,7 @@ function FirstChild() {
         <>
             <Navbar />
             <div  className="stylePage section">
-                <h1>First Page</h1>
+                <h1>First Child</h1>
             </div>
             <Footer />
         </>

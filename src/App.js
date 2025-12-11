@@ -14,15 +14,10 @@ import ThirdChild from "./pages/parent/ThirdChild";
 
 import ProtectedRoute from "./component/ProtectedRoute";
 
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 
 function App() {
-
     return (
         <BrowserRouter>
             <Routes>
@@ -32,9 +27,9 @@ function App() {
                 <Route path="/blog/:url" element={<Blog />}/>
                 <Route path="/pages">
                     <Route path="" element={<Parent />}/>
-                    <Route path="first-page" element={<FirstChid/>}/>
-                    <Route path="second-page" element={<SecondChild/>}/>
-                    <Route path="third-page" element={<ThirdChild/>}/>
+                    <Route path="first-child" element={<FirstChid/>}/>
+                    <Route path="second-child" element={<SecondChild/>}/>
+                    <Route path="third-child" element={<ThirdChild/>}/>
                 </Route>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/*" element={<Page404/>}/>

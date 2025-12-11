@@ -7,7 +7,7 @@ function ThirdChild() {
         <>
             <Navbar />
             <div  className="stylePage section">
-                <h1>Third Page</h1>
+                <h1>Third Child</h1>
             </div>
             <Footer />
         </>

@@ -1,4 +1,4 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router";
 import Navbar from '../../component/Navbar';
 import Footer from '../../component/Footer';
   
