@@ -2,12 +2,12 @@ import "./App.css";
 
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Blog from "./pages/blog/Blog";
+import Blogs from "./pages/blog/Blogs";
 import Parent from "./pages/parent/Parent";
 import Page404 from "./pages/page404/Page404";
 import Login from "./pages/login/Login";
 
-import BlogTopic from "./pages/blog/BlogTopic";
+import Blog from "./pages/blog/Blog";
 import FirstChid from "./pages/parent/FirstChild";
 import SecondChild from "./pages/parent/SecondChild";
 import ThirdChild from "./pages/parent/ThirdChild";
@@ -28,8 +28,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>}/>
                 <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>}/>
-                <Route path="/blog" element={<Blog />}/>
-                <Route path="/blog/:topicName" element={<BlogTopic />}/>
+                <Route path="/blog" element={<Blogs />}/>
+                <Route path="/blog/:url" element={<Blog />}/>
                 <Route path="/pages">
                     <Route path="" element={<Parent />}/>
                     <Route path="first-page" element={<FirstChid/>}/>
